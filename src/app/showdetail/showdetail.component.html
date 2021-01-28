@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <label for=""> Name: {{show?.name}}</label>
+          <img [src]="show?.image?.medium" alt="" srcset=""><br>
+          <label for="">Type:{{show?.type}}</label> <br><br>
+          <label for="">Geners: {{show?.genres}}</label> <br><br>
+          <label for="">language:{{show?.language}}</label> <br><br>
+          <label for="">Status: {{show?.status}}</label> <br><br>
+          <label for="">Runtime: {{show?.runtime}}</label> <br><br>
+          <label for=""> Premiered:{{show?. premiered}}</label> <br><br>
+          <label for=""> OfficialSite:{{show?. officialSite}}</label> <br><br>
+
+          <div *ngIf="!show.image">No Image Found</div>
+      </div>
+
+      <div class="col-md-3">
+          <label for="">  Schedule Time:{{show?.schedule?.time}}</label> <br><br>
+          <label for="">  Schedule Days:{{show?.schedule?.days}}</label> <br><br>
+          <label for="">Rating Average: {{show?.average}}</label> <br><br>
+          <label for="">Weight: {{show?.weight}}</label> <br><br>
+          <label for="">Network id: {{show?.network?.id}}</label> <br><br>
+          <label for="">Network Name: {{show?.network?.name}}</label> <br><br>
+          <label for="">Network Country Name: {{show?.network?.country?.name}}</label> <br><br>
+          <label for="">Network Country Code: {{show?.network?.country?.code}}</label> <br><br>
+          <label for="">Network Country TimeZone: {{show?.network?.country?.timezone}}</label> <br><br>
+          <label for="">WebChannel: {{show?.webChannel}}</label> <br><br>
+          <label for="">Externels Tvrage: {{show?.externals?.tvrage}}</label> <br><br>
+          <label for="">Externels Thetvdb: {{show?.externals?.thetvdb}}</label> <br><br>
+          <label for="">Externels imdb: {{show?.externals?.imdb}}</label> <br><br>
+          <label for="">Updated: {{show?.updated}}</label> <br><br>
+      </div>
+
+      <div class="col-md-6">
+          <h2>Summary:</h2>
+          <label for=""> <p>{{show?. summary}}</p></label>
+      </div>
+
+  </div>
+</div>
+
+<div style="color: red" *ngIf="networkError">
+  <app-networkerror [errorObj] = "error"></app-networkerror>
+</div>

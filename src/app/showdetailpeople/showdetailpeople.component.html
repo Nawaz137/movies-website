@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <img [src]="peop?.image?.medium" alt="" srcset=""><br>
+          <!-- <div *ngIf="!peop.image">No Image Found</div> -->
+      </div>
+      <div class="col-md-9">
+          <div>
+              <label for="">ID: {{peop?.id}}</label><br>
+              <label for="">Name: {{peop?.name}}</label> <br>
+              <label for="">Gendre: {{peop?.gender}}</label> <br>
+              <label for="">B.Day: {{peop?.birthday}}</label> <br>
+              <label for="">Country Nmae: {{peop?.country?.name}}</label><br>
+              <label for="">Links: {{peop?._links?.self?.href}}</label><br>
+          </div>
+  </div>
+</div>

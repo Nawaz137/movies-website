@@ -1,0 +1,15 @@
+<p>networkerror works!</p>
+<div class="network-container">
+  <app-lable lable="Number" [value]="errorObj.errorNumber"></app-lable>
+  <app-lable lable="Message" [value]="errorObj.message"></app-lable>
+  <!-- class="text" -->
+  <div style=" padding-top: 20px; font-size: 15px; color: white;"
+  *ngIf="errorObj.errorNumber>0">{{ errorObj.friendlyMessage }}</div>
+  <div style=" padding-top: 20px; font-size: 15px; color: white;"
+  *ngIf="errorObj.errorNumber == 0">There is some issue with your network. Please refresh the page.</div>
+</div>
+
+{{errorObj.errorNumber}}
+{{errorObj.Message}}
+{{errorObj.friendlyMessage}}
+{{errorObj}}
